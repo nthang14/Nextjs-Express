@@ -1,0 +1,19 @@
+.bg-generate-wallet {
+  background-color: var(--primary-color-300);
+}
+.wallet-item-left {
+  border: 1px solid var(--wallet-color);
+  border-right: 0.5px solid var(--wallet-color) !important;
+}
+.wallet-item-right {
+  border: 1px solid var(--wallet-color);
+  border-left: 0.5px solid var(--wallet-color) !important;
+}
+.wallet-item {
+}
+.wallet-item__value {
+  background-color: var(--primary-color-100);
+}
+.wallet-item__value__generate {
+  background-color: var(--primary-color-300);
+}

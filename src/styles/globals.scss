@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "./input";
+@import "./select";
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  --primary-color-900: #090e1b;
+  --primary-color-800: #343943;
+  --primary-color-700: #565c67;
+  --primary-color-600: #747783;
+  --primary-color-500: #9d9fa5;
+  --primary-color-400: #cecfd2;
+  --primary-color-300: #ebeced;
+  --primary-color-200: #fafafb;
+  --primary-color-100: #ffffff;
+  --color-error: #ea4335;
+  --color-success: #87d068;
+  --wallet-color: #d9d9d9;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  font-size: 16px;
+}
+
+.pni-layout {
+  .pni-layout-header {
+    background-color: var(--primary-color-100) !important;
+  }
+  .pni-layout-sider {
+    background: var(--primary-color-800) !important;
+  }
+  .ant-menu-title-content {
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+  }
+  .ant-menu-sub {
+    .ant-menu-title-content {
+      color: #fff;
+      font-weight: 600;
+      font-size: 14px;
+    }
+    .ant-menu-item {
+      padding-left: 28px !important;
+    }
+  }
+}
+.ant-layout {
+  background: #f5f7fc;
+}
+.pni-danger-text {
+  color: var(--color-error);
+}
+.pni-success-text {
+  color: var(--color-success);
+}

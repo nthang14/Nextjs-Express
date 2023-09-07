@@ -1,0 +1,21 @@
+.pni-input-login {
+  border: none !important;
+  border-bottom: 2px solid #000 !important;
+  padding: 10px 5px !important;
+  &:focus {
+    border: none !important;
+    box-shadow: none !important;
+    border-bottom: 2px solid #000 !important;
+  }
+  ::placeholder {
+    color: #777e90;
+  }
+}
+.pni-input-password {
+  .ant-input-affix-wrapper:focus,
+  .ant-input-affix-wrapper-focused {
+    border: none !important;
+    box-shadow: none !important;
+    border-bottom: 2px solid #000 !important;
+  }
+}
