@@ -26,22 +26,22 @@ const menu = [
   },
   {
     key: "in-app wallet",
-    label: "In-App Wallet",
+    label: "Users",
     children: [
       {
-        key: "Generate wallet",
+        key: "Users",
         icon: createElement(HomeOutlined),
-        label: <Link href="/generate-wallet">Generate wallet</Link>,
+        label: <Link href="/users">Users</Link>,
       },
       {
         key: "Transfer",
         icon: createElement(HomeOutlined),
-        label: <Link href="/transfer">Transfer</Link>,
+        label: <Link href="/">Transfer</Link>,
       },
       {
         key: "Transaction History",
         icon: createElement(HomeOutlined),
-        label: <Link href="/transaction-history">Transaction History</Link>,
+        label: <Link href="/">Transaction History</Link>,
       },
     ],
   },

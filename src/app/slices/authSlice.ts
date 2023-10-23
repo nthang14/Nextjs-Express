@@ -2,7 +2,6 @@ import { createSlice } from "@reduxjs/toolkit";
 import { saveAccessToken, saveRefreshToken } from "~/utils/storage";
 import { authServiceApi } from "~/app/services/authService";
 import { saveNonce, saveSignature } from "~/utils/storage";
-import { getSignatureWithEncrypted } from "~/app/ethers/index";
 // Type for our state
 export interface AuthState {
   mnemonic_encrypted?: string;

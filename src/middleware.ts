@@ -27,9 +27,10 @@ export function middleware(request: NextRequest) {
       url = "/generate-wallet";
     }
   }
-  return isToken !== isLoginPage(request.url)
-    ? NextResponse.next()
-    : NextResponse.redirect(new URL(url, request.url));
+  // return isToken !== isLoginPage(request.url)
+  //   ? NextResponse.next()
+  //   : NextResponse.redirect(new URL(url, request.url));
+  return NextResponse.next()
 }
 
 export const config = {

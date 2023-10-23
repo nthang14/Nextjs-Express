@@ -16,7 +16,6 @@ import {
 import { ErrorProps } from "~/types/globalTypes";
 import { METHOD } from "~/utils/constants";
 import { PATH_API } from "~/utils/constants";
-import { getSignatureWithNone } from "~/app/ethers/index";
 // create a new mutex
 const mutex = new Mutex();
 
@@ -39,26 +38,26 @@ instance.interceptors.request.use(
   }
 );
 
-const getAuthorization = async (address: string) => {
-  const nonce = await getNonce(address);
-  const signature = await getSignatureWithNone(nonce);
+// const getAuthorization = async (address: string) => {
+//   const nonce = await getNonce(address);
+//   const signature = await getSignatureWithNone(nonce);
 
-  return `${nonce}:${signature}`;
-};
+//   return `${nonce}:${signature}`;
+// };
 
-const getNonce = async (address: string) => {
-  const result = await instance.get(`auth/current-nonce?address=${address}`);
+// const getNonce = async (address: string) => {
+//   const result = await instance.get(`auth/current-nonce?address=${address}`);
 
-  return result.data.data;
-};
+//   return result.data.data;
+// };
 
 const callApi = async (args: any) => {
-  const isAuth = args.url.includes("/auth");
-  let header: any = {};
-  if (!isAuth) {
-    const auth = await getAuthorization(readAddressWallet());
-    header["authorization"] = auth;
-  }
+  // const isAuth = args.url.includes("/auth");
+  // let header: any = {};
+  // if (!isAuth) {
+  //   const auth = await getAuthorization(readAddressWallet());
+  //   header["authorization"] = auth;
+  // }
 
   const method = args.method.toLowerCase();
   switch (method) {
@@ -71,7 +70,6 @@ const callApi = async (args: any) => {
     default:
       return await instance.get(`${PATH_API}${args.url}`, {
         params: args.params,
-        headers: header,
       });
   }
 };

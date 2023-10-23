@@ -5,7 +5,6 @@ import { Provider } from "react-redux";
 import { store } from "~/app/store";
 import { useRouter } from "next/router";
 import AppLayout from "~/components/layout/AppLayout";
-import "~/i18n/i18n";
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
   const regex =
